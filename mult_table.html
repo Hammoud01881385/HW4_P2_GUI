@@ -1,0 +1,92 @@
+<!--
+Name: Rami Hammoud rami_hammoud@student.uml.edu
+Date: 12/3/2023
+File: mult_table.html
+GUI Assignment: HW4 Adding Sliders and new tabs
+
+Description: File for skeleton of page including user inputs and container for
+generated HTML table from the script file. Uses bootstrap for UI styling.
+Added new  elements for sliders and tabs. Checkbox added.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiplication Table Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container mt-4">
+        <h1 class="text-center">Multiplication Table Generator</h1>
+        <br>
+        <form id="inputForm" onsubmit="generateTable(event)">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="startHorizontal">Minimum Column Value:</label>
+                        <input type="number" class="form-control" id="startHorizontal" name="startHorizontal" required>
+                        <br>
+                        <div id="sliderMinCol" class="slider"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="endHorizontal">Maximum Column Value:</label>
+                        <input type="number" class="form-control" id="endHorizontal" name="endHorizontal" required>
+                        <br>
+                        <div id="sliderMaxCol" class="slider"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="startVertical">Minimum Row Value:</label>
+                        <input type="number" class="form-control" id="startVertical" name="startVertical" required>
+                        <br>
+                        <div id="sliderMinRow" class="slider"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="endVertical">Maximum Row Value:</label>
+                        <input type="number" class="form-control" id="endVertical" name="endVertical" required>
+                        <br>
+                        <div id="sliderMaxRow" class="slider"></div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="tabs" class="container mt-4">
+        <ul></ul>
+        <button id="deleteSelectedTabs" class="btn btn-danger">Delete Selected Tabs</button>
+        <div id="errorMessage" class="alert alert-danger" style="display: none;"></div>
+
+        <div class="table-container">
+            <table id="tableContainer" class="table table-bordered table-striped table-fixed">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    </div>
+    
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

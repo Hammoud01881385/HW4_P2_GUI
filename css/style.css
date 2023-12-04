@@ -1,0 +1,60 @@
+/* 
+Name: Rami Hammoud rami_hammoud@student.uml.edu
+Date: 12/3/2023
+File: style.css
+GUI Assignment: HW4 Creating multiplication table from javascript
+ (no changes since HW3 were made)
+Description: File for syling of web page, mainly table colors/lighting. Most
+styling is already done through bootstrap */
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+#errorMessage {
+  display: none;
+}
+
+/* Style the top header row */
+.table-container thead th {
+  background-color:  darkred;
+  color: #fff;
+}
+
+.table-container th {
+  background-color:  darkred;
+  color: #fff;
+}
+
+.table-container td:hover {
+  background-color: darkred; /* red background when hovering */
+  color: #fff; /* White text color when hovering */
+}
+
+.table tr:nth-child(odd) td {
+  background-color: #f2efef; /* darker background for odd rows for appeal */
+}
+
+.table tr:nth-child(odd) td:hover {
+  background-color: darkred; /* redbackground when hovering */
+  color: #fff; /* White text color when hovering */
+}
+
+
+/* container for table*/
+.table-container {
+  max-height: 600px;
+  overflow: auto;
+}
+
+.table-container table {
+  margin-bottom: 0;
+}
+
+/* the body of the scroll bar */
+.scrollable-body {
+  display: block;
+  max-height: calc(100vh - 200px); /*adjusted based on height */
+  overflow-y: auto;
+}
+
